@@ -2,25 +2,18 @@ package com.example.openweatherapplication.model
 
 
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
 data class Main(
     @SerializedName("feels_like")
-    val feelsLike: Double?,
-    @SerializedName("grnd_level")
-    val grndLevel: Int?,
+    var feelsLike: Double? = 0.0,
     @SerializedName("humidity")
-    val humidity: Int?,
+    var humidity: Int? = 0,
     @SerializedName("pressure")
-    val pressure: Int?,
-    @SerializedName("sea_level")
-    val seaLevel: Int?,
+    var pressure: Int? = 0,
     @SerializedName("temp")
-    val temp: Double?,
-    @SerializedName("temp_kf")
-    val tempKf: Double?,
+    var temp: Double? = 0.0,
     @SerializedName("temp_max")
-    val tempMax: Double?,
+    var tempMax: Double? = 0.0,
     @SerializedName("temp_min")
-    val tempMin: Double?
-) : Serializable
+    var tempMin: Double? = 0.0
+)

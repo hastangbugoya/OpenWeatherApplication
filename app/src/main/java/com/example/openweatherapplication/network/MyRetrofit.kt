@@ -1,8 +1,7 @@
 package com.example.openweatherapplication.network
 
 import com.example.openweatherapplication.BuildConfig
-import com.example.openweatherapplication.model.Forecast
-import retrofit2.Call
+import com.example.openweatherapplication.model.Weather
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -18,6 +17,6 @@ class MyRetrofit {
 }
 
 interface MyWeatherService {
-        @GET("forecast") //"forecast?q={city}&appid={api key}"
-            suspend fun getCityWeather(@Query("q") myCity: String, @Query("appid") appID: String): Response<Forecast>
+        @GET("weather") //"weather?q={city}&appid={api key}"
+            suspend fun getCityWeather(@Query("q") myCity: String, @Query("appid") appID: String): Response<Weather>
     }

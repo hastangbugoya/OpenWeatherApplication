@@ -2,11 +2,10 @@ package com.example.openweatherapplication.model
 
 
 import com.google.gson.annotations.SerializedName
-import java.io.Serializable
 
 data class Coord(
     @SerializedName("lat")
-    val lat: Double?,
+    var lat: Double? = 0.0,
     @SerializedName("lon")
-    val lon: Double?
-) : Serializable
+    var lon: Double? = 0.0
+)
